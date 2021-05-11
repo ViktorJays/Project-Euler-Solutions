@@ -1,6 +1,9 @@
+use std::slice::range;
+
 fn main() {
     //multiples();
-    fibonacci_even();
+    //fibonacci_even();
+    print!("{}", largest_prime_factor(600851475143));
 }
 
 // Exercicio 1
@@ -51,4 +54,16 @@ fn fibonacci_even() {
         aux += 1;
     }
     print!("Even-Valued Terms lesser than 4 million sum: {}", even_sum);
+}
+
+fn largest_prime_factor(mut n: i32) -> i32
+{
+    let mut max_prime = -1;
+
+    while n % 2 == 0 {
+        max_prime = 2;
+        n /= 2;
+    }
+
+    return max_prime;
 }
