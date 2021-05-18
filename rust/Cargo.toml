@@ -1,6 +1,6 @@
 [package]
 name = "rust"
-version = "1.2.3"
+version = "1.2.6"
 authors = ["jsktlang"]
 edition = "2018"
 
