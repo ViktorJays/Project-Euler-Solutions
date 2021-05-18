@@ -2,8 +2,8 @@
 //mod exec_2;
 mod exec_3;
 
-use crate::exec_3::prime_n;
+use crate::exec_3::largest_prime_f;
 
 fn main() {
-    prime_n();
+    largest_prime_f(0);
 }

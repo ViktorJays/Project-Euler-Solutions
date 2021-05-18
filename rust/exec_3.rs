@@ -1,35 +1,16 @@
-pub(crate) fn prime_n() {
-    let mut flag = 0;
-    let mut loop_num = 1;
-    let prime_sequence = 1000;
-    let loop_limit = prime_sequence;
-    let mut p_n = 1;
-    let mut counter = 1;
+pub(crate) fn largest_prime_f(num: i64) {
+    let mut flag: i64 = 0;
+    let mut loop_num: i64 = 1;
+    let mut counter: i64 = 1;
+    let mut aux = num;
+    let seq: i64 = num;
+    let loop_limit: i64 = seq;
+    let largest: i64 = 0;
 
     loop {
-        if p_n > prime_sequence {
+        if aux == 0 {
+            println!("infinite");
             break;
-        } else {
-            //println!("Q: {} is prime? x loop: {}", p_n, loop_num);
-            if loop_num < loop_limit {
-                if p_n % loop_num == 0 {
-                    flag += 1;
-                    loop_num += 1;
-                } else {
-                    loop_num += 1;
-                }
-            } else if flag <= 2 {
-                println!("{}: {} IS prime!", counter, p_n);
-                p_n += 1;
-                counter += 1;
-                loop_num = 1;
-                flag = 0;
-            } else {
-                //println!("A: {} is NOT prime!", p_n);
-                p_n += 1;
-                loop_num = 1;
-                flag = 0;
-            }
         }
     }
 }
